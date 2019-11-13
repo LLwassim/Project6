@@ -8,7 +8,7 @@ fetch(url)
         //checking what the api response is
         let countries = JSON.stringify(res)
         //turn countries into string form
-        fs.writeFile('../db/data.json', countries, err => {
+        fs.writeFile('./db/data.json', countries, err => {
             if (err) {
                 console.log(err)
             }
