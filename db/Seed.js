@@ -1,5 +1,5 @@
 const data = require('./data.json')
-
+const Countries = require('../models/Countries')
 const countryData = data.map(item => {
     const Country = {}
     Country.name = item.name
@@ -11,10 +11,10 @@ const countryData = data.map(item => {
 })
 console.log(countryData)
 
-Country.delete({})
+Countries.deleteMany({})
     .then(() => {
-        Country.create(data)
-            .then(countryData => {
+        Countries.create(countryData)
+            .then(countries => {
                 console.log(countryData),
                 process.exit()
             })
