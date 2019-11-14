@@ -11,9 +11,9 @@ const countryData = data.map(item => {
 })
 console.log(countryData)
 
-countryData.delete({})
+Country.delete({})
     .then(() => {
-        countryData.create(data)
+        Country.create(data)
             .then(countryData => {
                 console.log(countryData),
                 process.exit()
