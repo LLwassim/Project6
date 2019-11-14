@@ -1,8 +1,8 @@
 const express = require('express')
 const app = express()
-const parser = require('body parser')
+const parser = require('body-parser')
 app.use(parser.json)
-const countries = require('./models/Countries')
+const countries = require('./models/Countries')\
 let mongoURI = "";
 
 app.get('/Countries', function (req, res) {
